@@ -1,0 +1,42 @@
+/* Base navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Menu list hidden by default */
+.menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: #f4f4f4;
+  list-style: none;
+  padding: 10px;
+  display: none;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+  .menu {
+    width: 150px;
+  }
+}
+
+/* Show menu when hamburger is focused */
+.hamburger:focus + .menu {
+  display: block;
+}
